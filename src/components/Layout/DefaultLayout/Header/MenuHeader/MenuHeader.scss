@@ -1,0 +1,32 @@
+.menu_item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 0.45rem 1rem;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.6rem;
+    text-rendering: optimizeSpeed;
+    font-weight: 500;
+    cursor: pointer;
+    &:hover {
+        background-color: rgb(246, 244, 244);
+    }
+}
+.menuc2_wrap {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    position: relative;
+}
+.menuc2_icon {
+    font-size: 1.8rem;
+    margin-left: 1.8rem;
+    color: #464040;
+}
+.menuc2_title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

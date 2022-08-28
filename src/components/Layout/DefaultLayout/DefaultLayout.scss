@@ -1,0 +1,14 @@
+.wraper_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inner_container {
+    display: flex;
+    width: 1150px;
+    height: 1150px;
+}
+.content {
+    z-index: 0;
+}

@@ -1,0 +1,172 @@
+.Wraper_header {
+    height: 60px;
+    width: 100%;
+    border-bottom: 1px solid #e7e7e7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.inner_header {
+    width: 1150px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header_search {
+    width: 361px;
+    height: 46px;
+    border-radius: 5rem;
+    font-size: 1.6rem;
+    color: #828282;
+
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    background-color: var(--bgr-header_search);
+    justify-content: center;
+    position: relative;
+
+    &:focus-within {
+        border: 1.5px solid rgba(22, 24, 35, 0.2);
+    }
+    .header_search_input {
+        border: none;
+        padding: 1.5rem;
+        font-size: 1.8rem;
+        background-color: var(--bgr-header_search);
+        outline: none;
+        height: 100%;
+        flex: 1;
+        height: 100%;
+        &:not(:placeholder-shown) ~ .header_search_search {
+            color: rgb(62, 61, 61);
+        }
+    }
+    .header_search_clear {
+        background-color: var(--bgr-header_search);
+        border: none;
+        height: 100%;
+
+        border-right: 1px solid #e6e6e6;
+        font-size: 1.5rem;
+        color: var(--icons-header_color);
+        padding-right: 1.2rem;
+        transform: translateY(-1px);
+    }
+    .header_search_load {
+        // display: none;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: transparent;
+        border: none;
+        font-size: 1.5rem;
+        color: var(--icons-header_color);
+        position: absolute;
+        right: 71px;
+        top: -2px;
+        transform: translateY(3px);
+        animation: headerSearchLoad 1.3s linear infinite;
+    }
+
+    @keyframes headerSearchLoad {
+        from {
+            transform: rotate(0);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
+    .header_search_search {
+        border: none;
+        padding: 0 1.8rem;
+        outline: none;
+        height: 110%;
+        font-size: 2.2rem;
+        background-color: var(--bgr-header_search);
+        transform: translateY(1.6px);
+        cursor: pointer;
+        position: relative;
+        color: var(--icons-header_color);
+        &:active {
+            opacity: 0.8;
+        }
+        &:hover {
+            background-color: rgba(22, 24, 35, 0.2);
+        }
+        &::before {
+            content: '';
+            display: block;
+            width: 1px;
+            height: 60%;
+            background-color: rgba(22, 24, 35, 0.2);
+            position: absolute;
+            top: 20%;
+            left: 0;
+        }
+    }
+}
+.header_action {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header_action_icon {
+    margin-left: 0.8rem;
+    cursor: pointer;
+    font-style: normal;
+    padding: 0 8px;
+    font-size: 2rem;
+    color: var(--icons-header_color);
+}
+.header_search_history {
+    width: 361px;
+    padding-top: 6px;
+    border-radius: 8px;
+    box-shadow: rgb(0 0 0 /12%) 0 2px 12px;
+    height: auto;
+    max-height: min((100vh - 98px) - 60px, 734px);
+    background: #fff;
+    overflow-y: auto;
+    .search_history_head {
+        margin-left: 1rem;
+        margin-bottom: 0.5rem;
+        color: #333;
+    }
+}
+.header_search_history::-webkit-scrollbar {
+    width: 5px;
+}
+
+.header_search_history::-webkit-scrollbar-track {
+    background: rgb(179, 177, 177);
+    border-radius: 5px;
+}
+
+.header_search_history::-webkit-scrollbar-thumb {
+    background: rgb(136, 136, 136);
+    border-radius: 5px;
+}
+
+.header_search_history::-webkit-scrollbar-thumb:hover {
+    background: rgb(100, 100, 100);
+    border-radius: 5px;
+}
+
+.header_search_history::-webkit-scrollbar-thumb:active {
+    background: rgb(68, 68, 68);
+    border-radius: 5px;
+}
+
+.menu_items {
+    width: 224px;
+    border-radius: 8px;
+    box-shadow: rgb(0 0 0 /12%) 0 2px 12px;
+    margin-top: 0.6rem;
+    background-color: #fff;
+    flex-direction: column;
+}
